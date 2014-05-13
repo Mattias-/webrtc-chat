@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style type="text/css">
+      .chat-window{ width:300px; margin:10px}
+      .chat-window-footer{ padding:2px}
+      .chat-panel{ min-height:400px;
+        height:400px;
+        overflow-y:scroll;
+        padding:0px}
+      .chat-panel-message{ padding:5px}
+      .chat-panel-message p { word-wrap:break-word}
+    </style>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="chat.js"></script>
+  </head>
+  <body>
+    <div class="panel panel-primary chat-window">
+      <div class="panel-heading">Chat</div>
+      <div class="panel-body chat-panel" id="chat-panel">
+      </div>
+      <div class="panel-footer chat-window-footer">
+        <form role="form" class="form-inline message-form">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" autocomplete="off" id="message-field">
+              <span class="input-group-btn">
+                <input class="btn btn-default" type="submit" value="Send" id="send-message">
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
